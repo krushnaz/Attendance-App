@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing Colors -->
+    <color name="colorPrimary">#007AFF</color> <!-- Example color 6200EE -->
+    <color name="colorPrimaryDark">#007AFF</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="primaryColor">#3498db</color>
+    <color name="primaryColorDark">#2980b9</color>
+    <color name="background">#f5f5f5</color>
+    <color name="gray">#B0B0B0</color>
+
+    <!-- Added Colors for UI -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Light Gray for the background -->
+    <color name="cardBackgroundColor">#FFFFFF</color> <!-- White for cards and containers -->
+
+    <!-- Button Backgrounds -->
+    <color name="rounded_button_background">#6200EE</color> <!-- Primary color for buttons -->
+    <color name="fab_background">#03DAC6</color> <!-- Secondary color for Floating Action Button -->
+    <color name="qrCodeButtonColor">#FF5722</color> <!-- Replace with your desired color -->
+
+    <!-- Circle Background -->
+    <color name="circle_background">#BB86FC</color> <!-- Light Purple for profile image background -->
+    <color name="iconColor">#007AFF</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimaryColor">#000000</color> <!-- Black for primary text -->
+    <color name="textSecondaryColor">#757575</color> <!-- Dark Gray for secondary text -->
+    <color name="textWhite">#FFFFFF</color> <!-- White for text on colored backgrounds -->
+
+    <!-- Shadows -->
+    <color name="shadowColor">#3700B3</color> <!-- Dark Purple for shadows -->
+
+    <color name="viewButtonColor">#4CAF50</color> <!-- Green -->
+    <color name="editButtonColor">#FFC107</color> <!-- Amber -->
+    <color name="deleteButtonColor">#F44336</color> <!-- Red -->
+
+    <color name="viewButtonBackground">#E8F5E9</color> <!-- Light Green Background -->
+    <color name="editButtonBackground">#FFF3E0</color> <!-- Light Amber Background -->
+    <color name="deleteButtonBackground">#FFEBEE</color> <!-- Light Red Background -->
+
+    <color name="colorGray">#D0D0D0</color>
+
+    <color name="colorError">#D32F2F</color>
+    <color name="dividerColor">#BDBDBD</color>
+
+    <!-- Define colors -->
+    <color name="darkBorderColor">#FF000000</color> <!-- Black or Dark Color -->
+
+    <color name="color_primary">#E91E63</color>
+    <color name="color_primary_dark">#8c103a</color>
+    <color name="color_accent">#C317A9</color>
+
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="successColor">#4CAF50</color> <!-- A common green color -->
+    <color name="errorColor">#F44336</color> <!-- A common red color -->
+    <color name="grey">#9E9E9E</color> <!-- Default color -->
+    <color name="colorDivider">#DDDDDD</color> <!-- Light gray color for the divider -->
+    <color name="ic_launcher_background">#0491e9</color>
+    <color name="black">#000000</color>
+
+
+
+</resources>

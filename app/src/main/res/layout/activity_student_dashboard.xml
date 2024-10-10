@@ -1,0 +1,313 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.StudentDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark"
+            app:menu="@menu/menu_main"
+            app:title="Student Dashboard"
+            app:titleTextColor="@color/textWhite">
+
+            <!-- QR Code Icon Button on the Toolbar -->
+            <ImageButton
+                android:id="@+id/button_qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_qr_code"
+                android:contentDescription="QR Code"
+                android:padding="12dp" />
+
+            <!-- Logout Icon Button on the Toolbar -->
+            <ImageButton
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout"
+                android:padding="12dp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Welcome, User"
+            android:textColor="@color/primaryColor"
+            android:textSize="20sp" />
+
+        <!-- Quick Stats -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/textWhite">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <!-- Today's Classes -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTodaysClassesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Today's Classes"
+                            android:textSize="18sp"
+                            android:textColor="@color/primaryColor"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTodaysClassesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="32sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Attendance Summary -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAttendanceSummaryLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Attendance Summary"
+                            android:textSize="18sp"
+                            android:textColor="@color/primaryColor"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAttendanceSummaryPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80%"
+                            android:textSize="32sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Cards -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/textWhite">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <!-- Mark Attendance -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="Mark Attendance Icon"
+                            android:textSize="12sp"
+                            android:src="@drawable/ic_attendance" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkAttendance"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Mark Attendance"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- View Attendance Reports -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="Attendance Reports Icon"
+                            android:src="@drawable/ic_attendance_reports" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnViewAttendanceReports"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Attendance Reports"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- View Notifications -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_view_attendace"
+                            android:contentDescription="Notifications Icon" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnViewAttendace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Attendance"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="12sp"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Profile -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_profile"
+                            android:contentDescription="Profile Icon" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profile"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="12sp"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

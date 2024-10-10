@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title and Cancel Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Create Course"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cancel"
+                app:tint="@android:color/black"
+                android:contentDescription="Cancel" />
+
+        </LinearLayout>
+
+        <!-- Course Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Name"
+                android:textColor="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Semester Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSemester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Semester"
+                android:textColor="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Division Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Division"
+                android:textColor="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Course"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/colorPrimaryDark" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

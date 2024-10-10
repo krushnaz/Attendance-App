@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_admin_create_teacher.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Teacher"
+        android:textSize="24sp"
+        android:textColor="@color/primaryColor"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Form fields -->
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <EditText
+        android:id="@+id/etDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Department"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg" />
+
+    <!-- Photo upload -->
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/photo_border"/>
+
+    <Button
+        android:id="@+id/btnSaveTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Teacher"
+        android:background="@drawable/button_bg"
+        android:textColor="@android:color/white"
+        android:padding="12dp"/>
+</LinearLayout>

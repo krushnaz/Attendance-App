@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.ManageTeachersActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Manage Teachers"
+        app:titleCentered="true"
+        app:titleTextColor="@color/textWhite"/>
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sr No"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Teacher Name"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Department"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Actions"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView to display the list of teachers -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTeachers"
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        android:layout_below="@id/header"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Floating Action Button to add a new teacher -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Teacher"
+        app:backgroundTint="@color/primaryColorDark"
+        app:srcCompat="@android:drawable/ic_input_add"/>
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title and Cancel Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Create Room"
+                android:textSize="20sp"
+                android:textColor="@color/textPrimaryColor"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cancel"
+                android:contentDescription="Cancel"/>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRoomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimaryColor"
+                android:hint="Room Name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Latitude"
+                android:inputType="numberDecimal"
+                android:textColor="@color/textPrimaryColor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longitude"
+                android:inputType="numberDecimal"
+                android:textColor="@color/textPrimaryColor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Fetch Location Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFetchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fetch Location"
+            app:backgroundTint="@color/primaryColor"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Room"
+            app:backgroundTint="@color/primaryColor"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

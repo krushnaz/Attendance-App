@@ -1,0 +1,120 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.GPSStatusFragment">
+
+    <!-- MaterialCardView to display status -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- FrameLayout to hold the icons -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp">
+
+                <!-- LinearLayout for vertical arrangement of icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <!-- Location icon -->
+                    <ImageView
+                        android:id="@+id/imageLocationIcon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_location"
+                        android:contentDescription="@string/location_icon" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/dividerColor" />
+
+                    <!-- Circle background for status icon -->
+                    <FrameLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <!-- Circle background -->
+                        <View
+                            android:id="@+id/circleBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circle_background" />
+
+                        <!-- Status icon (success tick or error cross) -->
+                        <ImageView
+                            android:id="@+id/imageStatusIcon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/status_icon" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- TextView for status message -->
+            <TextView
+                android:id="@+id/textStatusMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimaryColor"
+                android:text="@string/gps_verification_status" />
+
+            <!-- Button for next step -->
+            <!-- Button for next step -->
+            <Button
+                android:id="@+id/buttonStatusAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:backgroundTint="@color/iconColor"
+            android:text="@string/action_next_step"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:elevation="4dp"
+            android:letterSpacing="0.1" />
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

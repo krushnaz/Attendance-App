@@ -1,0 +1,152 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title and Cancel Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Subject Details"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/textPrimaryColor"
+                android:gravity="center_vertical"/>
+
+            <ImageButton
+                android:id="@+id/btn_Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cancel"
+                android:src="@drawable/ic_cancel" />
+        </LinearLayout>
+
+        <!-- Horizontal Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/tv_SubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subject Code -->
+        <TextView
+            android:id="@+id/tv_SubjectCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Teacher Name -->
+        <TextView
+            android:id="@+id/tv_TeacherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Start Time -->
+        <TextView
+            android:id="@+id/tv_StartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- End Time -->
+        <TextView
+            android:id="@+id/tv_EndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Room -->
+        <TextView
+            android:id="@+id/tv_Room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Lecture Type -->
+        <TextView
+            android:id="@+id/tv_LectureType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Day -->
+        <TextView
+            android:id="@+id/tv_Day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Division -->
+        <TextView
+            android:id="@+id/tv_Division"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Active Status -->
+        <TextView
+            android:id="@+id/tv_Active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Activate Button -->
+        <Button
+            android:id="@+id/btn_Activate"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textWhite"
+            android:layout_height="wrap_content"
+            android:text="Change Active Status"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

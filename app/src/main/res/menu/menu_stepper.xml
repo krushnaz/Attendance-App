@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/step_1"
+        android:title="Lecture List"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/step_2"
+        android:title="GPS Verification"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/step_3"
+        android:title="Biometric Verification"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/step_4"
+        android:title="Success"
+        app:showAsAction="ifRoom" />
+</menu>

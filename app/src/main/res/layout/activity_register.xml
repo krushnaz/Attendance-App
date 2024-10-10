@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- App Logo -->
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_app_icon"
+            android:contentDescription="App Logo"
+            android:layout_marginBottom="8dp" /> <!-- Reduced margin -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Registration"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp"
+        android:textColor="#673AB7" />
+
+        <!-- CardView for Registration Form -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="672dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Full Name Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    app:hintTextColor="@android:color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Class Name Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Class Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerClassName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:minHeight="48dp"
+                    android:spinnerMode="dropdown" /> <!-- Set minimum height for smaller spinner -->
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/darker_gray" />
+
+                <!-- Semester Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Semester"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerSemester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:minHeight="48dp"
+                    android:spinnerMode="dropdown" /> <!-- Set minimum height for smaller spinner -->
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/darker_gray" />
+
+                <!-- Division Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Division"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:minHeight="48dp"
+                    android:spinnerMode="dropdown" /> <!-- Set minimum height for smaller spinner -->
+
+                <!--                &lt;!&ndash; Divider &ndash;&gt;-->
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="1dp"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_marginBottom="8dp"-->
+                <!--                    android:background="@android:color/darker_gray" />-->
+
+                <!-- Roll Number Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Roll Number"
+                    app:hintTextColor="@android:color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRollNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Mobile Number Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    app:hintTextColor="@android:color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/darker_gray" />
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:hintTextColor="@android:color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCaptureFace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#673AB7"
+                    android:text="Capture Face"
+                    android:textColor="@android:color/white" />
+
+
+                <!-- Register Button -->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#673AB7"
+                    android:text="Register"
+                    android:textColor="@android:color/white" />
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/btnGoToLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="Already have an account? Login"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

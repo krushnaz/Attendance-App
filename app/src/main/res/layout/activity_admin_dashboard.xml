@@ -1,0 +1,299 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.AdminDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark"
+            app:title="Admin Dashboard"
+            app:titleTextColor="@color/textWhite">
+
+            <!-- Logout Icon Button on the Toolbar -->
+            <ImageButton
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout"
+                android:padding="12dp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Welcome, Admin"
+            android:textColor="@color/primaryColor"
+            android:textSize="20sp" />
+
+        <!-- Quick Stats -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/textWhite">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <!-- Total Users -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTotalUsersLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Students"
+                            android:textSize="18sp"
+                            android:textColor="@color/primaryColor"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTotalStudents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textSize="32sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Attendance Summary -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAttendanceSummaryLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teachers"
+                            android:textSize="18sp"
+                            android:textColor="@color/primaryColor"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTotalTeachers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="90%"
+                            android:textSize="32sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Cards -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/textWhite">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <!-- Manage Users -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="Manage Users Icon"
+                            android:src="@drawable/ic_profile" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnManageStudents"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Manage Students"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- View Attendance Reports -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="Attendance Reports Icon"
+                            android:src="@drawable/ic_profile" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnManageTeachers"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Manage Teachers"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Manage Classes -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="Manage Classes Icon"
+                            android:src="@drawable/ic_schedule" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnManageTimeTableSchedule"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Manage Time Tables"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- View Reports -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/textWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:contentDescription="View Reports Icon"
+                            android:src="@drawable/ic_room" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnManageRooms"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Manage Rooms"
+                            android:textSize="12sp"
+                            android:textColor="@color/primaryColor" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

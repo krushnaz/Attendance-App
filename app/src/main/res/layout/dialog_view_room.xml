@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title and Close Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View Room"
+                android:textSize="20sp"
+                android:textColor="@color/textPrimaryColor"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cancel"
+                android:contentDescription="Cancel"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"/>
+
+
+        <!-- Room Name TextView -->
+        <TextView
+            android:id="@+id/tvRoomName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Room Name"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"/>
+
+        <!-- Latitude TextView -->
+        <TextView
+            android:id="@+id/tvLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Latitude"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"/>
+
+        <!-- Longitude TextView -->
+        <TextView
+            android:id="@+id/tvLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Longitude"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryColor"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

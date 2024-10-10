@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- QR Code Scanner View placed at the back -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Transparent scan box with blue border and rounded corners -->
+    <View
+        android:id="@+id/scan_box"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/zxing_viewfinder_frame"
+        android:layout_centerInParent="true" />
+
+    <!-- Red laser line that moves vertically inside the scan box -->
+    <View
+        android:id="@+id/scan_line"
+        android:layout_height="2dp"
+        android:background="@drawable/zxing_viewfinder_laser"
+        android:layout_width="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/scan_box" />
+
+</RelativeLayout>

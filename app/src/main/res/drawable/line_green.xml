@@ -1,0 +1,7 @@
+<!-- res/drawable/line_green.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="2dp"
+        android:height="2dp" />
+    <solid android:color="@color/colorAccent" />
+</shape>

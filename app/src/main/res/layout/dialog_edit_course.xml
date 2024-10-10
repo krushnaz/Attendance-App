@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title and Cancel Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit Course"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cancel"
+                android:contentDescription="Cancel"/>
+        </LinearLayout>
+
+        <!-- Course Edit Fields -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Name"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSemester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Semester"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Division"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSaveCourse"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/primaryColor" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

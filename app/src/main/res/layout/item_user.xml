@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <!-- Example Row -->
+    <TableRow
+        android:background="@color/cardBackgroundColor"
+        android:padding="5dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/tvSrNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/textPrimaryColor"/>
+
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/textPrimaryColor"/>
+
+        <TextView
+            android:id="@+id/tvRollNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/textPrimaryColor"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- View Button -->
+            <ImageButton
+                android:id="@+id/btnViewStudent"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="@color/textWhite"
+                android:contentDescription="@string/view"
+                app:srcCompat="@drawable/ic_view"
+                app:tint="@color/viewButtonColor" />
+
+            <!-- Edit Button -->
+            <ImageButton
+                android:id="@+id/btnEditStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="@color/textWhite"
+                android:contentDescription="@string/edit"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/editButtonColor" />
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/btnDeleteStudent"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:background="@color/textWhite"
+                android:contentDescription="@string/delete"
+                app:srcCompat="@drawable/ic_delete"
+                app:tint="@color/deleteButtonColor" />
+        </LinearLayout>
+    </TableRow>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <!-- Add more rows here dynamically -->
+
+</TableLayout>

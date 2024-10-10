@@ -1,0 +1,112 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions for camera and biometric authentication -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="YOUR_API_KEY_HERE" />
+
+    <application tools:ignore="GoogleAppIndexingWarning"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AttendanceManagementSystem"
+        tools:targetApi="31">
+
+
+        <!-- SplashActivity as the launcher activity -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AttendanceManagementSystem"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other activities -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.AdminDashboardActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.StudentDashboardActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.TeacherDashboardActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.AdminCreateTeacherActivity"
+            android:exported="true"/>
+
+        <activity android:name=".activities.ManageStudentsActivity" />
+        <activity android:name=".activities.ManageTeachersActivity" />
+        <activity android:name=".activities.ManageAttendanceActivity" />
+        <activity android:name=".activities.HelpCenterActivity" />
+        <activity android:name=".activities.EditStudentActivity" />
+        <activity android:name=".activities.EditTeacherActivity" />
+        <activity android:name=".activities.ManageScheduleActivity"/>
+        <activity android:name=".activities.MarkAttendanceActivity"/>
+        <activity android:name=".activities.TeacherProfileActivity"/>
+        <activity android:name=".activities.ManageRoomsActivity" />
+        <activity android:name=".activities.QRCodeScanFromDashboardActivity" />
+        <activity android:name=".activities.AttendanceStatusActivity" />
+        <activity android:name=".activities.StudentAttendanceStatusActivity" />
+        <activity android:name=".activities.ManageAttendanceReportActivity" />
+        <activity android:name=".activities.ManageAttendanceReportActivityForTeacher" />
+        <activity android:name=".activities.ManageTimetableActivity" />
+        <activity android:name=".activities.CreateTimetableActivity" />
+        <activity android:name=".activities.StudentProfileActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".services.AttendanceService"
+            android:exported="false" />
+
+        <receiver android:name=".receivers.NotificationReceiver" />
+
+
+    </application>
+</manifest>

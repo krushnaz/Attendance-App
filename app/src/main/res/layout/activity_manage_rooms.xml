@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.ManageRoomsActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Manage Rooms"
+        app:titleTextColor="@color/textWhite" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sr No"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Room Name"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Actions"
+            android:textColor="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- RecyclerView to display the list of rooms -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRooms"
+        android:layout_width="match_parent"
+        android:layout_height="524dp"
+        android:layout_below="@id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Floating Action Button to add a new room -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Room"
+        app:backgroundTint="@color/primaryColorDark"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</RelativeLayout>

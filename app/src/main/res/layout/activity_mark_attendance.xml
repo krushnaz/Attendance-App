@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.MarkAttendanceActivity">
+
+    <!-- AppBar with Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:title="Attendance Marking"
+            app:titleTextColor="@color/textWhite">
+
+            <!-- QR Code Button -->
+            <ImageButton
+                android:id="@+id/button_qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="QR Code"
+                android:padding="12dp"
+                android:src="@drawable/ic_qr_code" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- CardView for Stepper Navigation View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_stepper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/textWhite"
+            android:padding="16dp">
+
+            <!-- Step Names above the stepper, centered -->
+            <TextView
+                android:id="@+id/step_names"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1. Select Lecture"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Horizontal Stepper Navigation -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stepper_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/step_names"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Step 1 -->
+                <LinearLayout
+                    android:id="@+id/step1_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/line1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/step1_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:background="@drawable/step_circle_background"
+                        android:text="1"
+                        android:textColor="@color/textWhite"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/line_drawable"
+                    app:layout_constraintStart_toEndOf="@id/step1_container"
+                    app:layout_constraintEnd_toStartOf="@id/step2_container"
+                    app:layout_constraintTop_toTopOf="@id/step1_container"
+                    app:layout_constraintBottom_toBottomOf="@id/step1_container" />
+
+                <!-- Step 2 -->
+                <LinearLayout
+                    android:id="@+id/step2_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/line1"
+                    app:layout_constraintEnd_toStartOf="@id/line2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/step2_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:background="@drawable/step_circle_background"
+                        android:text="2"
+                        android:textColor="@color/textWhite"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/line_drawable"
+                    app:layout_constraintStart_toEndOf="@id/step2_container"
+                    app:layout_constraintEnd_toStartOf="@id/step3_container"
+                    app:layout_constraintTop_toTopOf="@id/step2_container"
+                    app:layout_constraintBottom_toBottomOf="@id/step2_container" />
+
+                <!-- Step 3 -->
+                <LinearLayout
+                    android:id="@+id/step3_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/line2"
+                    app:layout_constraintEnd_toStartOf="@id/line3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/step3_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:background="@drawable/step_circle_background"
+                        android:text="3"
+                        android:textColor="@color/textWhite"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/line_drawable"
+                    app:layout_constraintStart_toEndOf="@id/step3_container"
+                    app:layout_constraintEnd_toStartOf="@id/step4_container"
+                    app:layout_constraintTop_toTopOf="@id/step3_container"
+                    app:layout_constraintBottom_toBottomOf="@id/step3_container" />
+
+                <!-- Step 4 -->
+                <LinearLayout
+                    android:id="@+id/step4_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/line3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/step4_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:background="@drawable/step_circle_background"
+                        android:text="4"
+                        android:textColor="@color/textWhite"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- RecyclerView for Lectures List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLectures"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_stepper"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- GPS Verification Container (Initially Hidden) -->
+    <FrameLayout
+        android:id="@+id/gps_verification_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/card_stepper"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Fragment will be dynamically added here -->
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/biometric_verification_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/card_stepper"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- Fragment will be dynamically added here -->
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/card_stepper"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- Fragment will be dynamically added here -->
+    </FrameLayout>
+    <!-- Previous Step Button -->
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/color_accent"
+        android:text="@string/exit"
+        android:textColor="@color/textWhite"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

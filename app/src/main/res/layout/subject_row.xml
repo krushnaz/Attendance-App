@@ -1,0 +1,74 @@
+<!-- res/layout/subject_row.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject Name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSubjectCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject Code"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTeacherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teacher Name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Time"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Time"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btnRemoveSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Remove Subject"/>
+</LinearLayout>

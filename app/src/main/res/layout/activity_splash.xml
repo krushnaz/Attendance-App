@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <!-- Logo (Adjusted position) -->
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="198dp"
+        android:layout_height="166dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_app_icon" />
+
+    <!-- Header (Centered) -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance App"
+        android:textColor="@color/textWhite"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ivSplashLogo"
+        android:fontFamily="@font/app_name_font"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Quote or Title (Centered) -->
+    <TextView
+        android:id="@+id/tvQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your attendance today shapes your achievements tomorrow!"
+        android:textColor="@color/textWhite"
+        android:textSize="18sp"
+        android:layout_below="@id/tvHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:fontFamily="@font/quote_font"
+        android:gravity="center" />
+
+</RelativeLayout>

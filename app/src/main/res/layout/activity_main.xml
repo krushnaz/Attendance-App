@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Attendance Management System"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/tvAppName"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF4081"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Contact Button -->
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"/>
+
+</RelativeLayout>

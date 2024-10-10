@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Horizontal Divider Above Row -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+
+    <!-- Table Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cardBackgroundColor"
+        android:paddingVertical="10dp">
+
+        <!-- Serial Number -->
+        <TextView
+            android:id="@+id/tvSrNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Sr No"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Subject Name"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- Lecture Type -->
+        <TextView
+            android:id="@+id/tvLectureType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Lecture Type"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- Teacher Name -->
+
+        <!-- Action Icons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Download Icon -->
+            <ImageButton
+                android:id="@+id/downloadIcon"
+                android:layout_width="37dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/cardBackgroundColor"
+                app:srcCompat="@drawable/ic_download"
+                app:tint="@color/iconColor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Horizontal Divider Below Row -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+</LinearLayout>

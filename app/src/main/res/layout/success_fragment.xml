@@ -1,0 +1,158 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SuccessFragment">
+
+    <!-- Container for fragments -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewSuccess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Success mark with green circle -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <View
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/circle_background"
+                        android:layout_centerInParent="true" />
+
+                    <ImageView
+                        android:id="@+id/image_success_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_check"
+                        android:contentDescription="@string/success_icon" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_success_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/attendance_marked_successfully"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/successColor" />
+
+            <TextView
+                android:id="@+id/text_student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/student_name"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <TextView
+                android:id="@+id/text_roll_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/roll_no"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <TextView
+                android:id="@+id/text_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/date_time"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <TextView
+                android:id="@+id/text_lecture_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/lecture_name"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <TextView
+                android:id="@+id/text_subject_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/subject_name"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <TextView
+                android:id="@+id/text_class_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/class_name"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/textPrimaryColor" />
+
+            <Button
+                android:id="@+id/button_go_to_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:backgroundTint="@color/iconColor"
+            android:text="@string/go_to_dashboard"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:elevation="4dp"
+            android:letterSpacing="0.1" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

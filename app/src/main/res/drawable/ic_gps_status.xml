@@ -1,0 +1,10 @@
+<!-- res/drawable/ic_gps_status.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12C2,16.42 4.51,20.3 8.27,21.74L11,17V12H13V17L15.74,21.74C19.49,20.3 22,16.42 22,12C22,6.48 17.52,2 12,2Z" />
+</vector>

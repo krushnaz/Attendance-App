@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <!-- Table Row -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardBackgroundColor"
+        android:paddingVertical="10dp">
+
+        <!-- Serial Number -->
+        <TextView
+            android:id="@+id/tvSerialNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="1"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Course Name -->
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Course Name"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Division -->
+        <TextView
+            android:id="@+id/tvDivision"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Division"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- View Button -->
+            <ImageButton
+                android:id="@+id/btnView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/view"
+                app:srcCompat="@drawable/ic_view"
+                app:tint="@color/viewButtonColor" />
+
+            <!-- Edit Button -->
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/edit"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/editButtonColor" />
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/delete"
+                app:srcCompat="@drawable/ic_delete"
+                app:tint="@color/deleteButtonColor" />
+        </LinearLayout>
+    </TableRow>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <!-- Add more rows dynamically -->
+
+</TableLayout>

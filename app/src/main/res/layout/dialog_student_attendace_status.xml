@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title Row with Cancel Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Details"
+            android:textSize="20sp"
+            android:textColor="@color/textPrimaryColor"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Cancel Button (Icon) -->
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cancel"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <!-- Student Name -->
+    <TextView
+        android:id="@+id/tv_student_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Name: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Student Roll No -->
+    <TextView
+        android:id="@+id/tv_student_roll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll No: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Subject Name -->
+    <TextView
+        android:id="@+id/tv_subject_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subject: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_division"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Division: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Semester: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Teacher Name -->
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Name: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+
+    <!-- Class Name -->
+    <TextView
+        android:id="@+id/tv_class_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Class Name: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Room Name -->
+    <TextView
+        android:id="@+id/tv_room_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Room Name: "
+        android:textSize="16sp"
+        android:textColor="@color/textPrimaryColor"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Change Status Button -->
+    <Button
+        android:id="@+id/btn_change_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Status"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+</LinearLayout>

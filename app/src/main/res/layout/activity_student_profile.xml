@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Profile"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:background="@color/textWhite"
+            android:textStyle="bold"
+            android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+
+        <!-- Student Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="12dp"
+            android:background="@drawable/card_border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="16dp">
+
+                <!-- Student Full Name -->
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name: Krushna Zarekar"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Student Course Name -->
+                <TextView
+                    android:id="@+id/tvCourseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course: MCA"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Student Division -->
+                <TextView
+                    android:id="@+id/tvDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Division: A"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvRollNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Division: A"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Student Semester -->
+                <TextView
+                    android:id="@+id/tvSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester: Semester 1"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Student Mobile Number -->
+                <TextView
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number: 1234567890"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+                <!-- Edit Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    app:backgroundTint="@color/primaryColor"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

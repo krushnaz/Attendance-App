@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+
+    <!-- Table Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cardBackgroundColor"
+        android:paddingVertical="10dp">
+
+        <!-- Serial Number -->
+        <TextView
+            android:id="@+id/tvSerialNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="1"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Lecture Name -->
+        <TextView
+            android:id="@+id/tvLectureName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Lecture Name"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Lecture Date -->
+        <TextView
+            android:id="@+id/tvLectureDate"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Lecture Date"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- View Button -->
+            <ImageButton
+                android:id="@+id/btnView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/view"
+                app:srcCompat="@drawable/ic_view"
+                app:tint="@color/viewButtonColor" />
+
+            <!-- Edit Button -->
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/edit"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/editButtonColor" />
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cardBackgroundColor"
+                android:contentDescription="@string/delete"
+                app:srcCompat="@drawable/ic_delete"
+                app:tint="@color/deleteButtonColor" />
+
+            <!-- QR Code Button -->
+            <ImageButton
+                android:id="@+id/btnQRCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@color/textWhite"
+                android:contentDescription="@string/generate_qr_code"
+                app:srcCompat="@drawable/ic_qr_code"
+                app:tint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+</LinearLayout>

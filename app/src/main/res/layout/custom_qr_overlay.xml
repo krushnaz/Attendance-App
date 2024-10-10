@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Define the framing rectangle -->
+    <View
+        android:id="@+id/zxing_framing_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zxing_viewfinder_frame" />
+
+    <!-- Optionally add other elements such as a laser scanner or text -->
+    <View
+        android:id="@+id/zxing_viewfinder_laser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zxing_viewfinder_laser" />
+
+    <TextView
+        android:id="@+id/zxing_status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan a QR code"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal|bottom"
+        android:padding="16dp" />
+</FrameLayout>

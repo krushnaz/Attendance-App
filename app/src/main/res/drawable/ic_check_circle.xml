@@ -1,0 +1,14 @@
+<!-- res/drawable/ic_check_circle.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#4CAF50"/> <!-- Circle color -->
+            <corners android:radius="50dp"/> <!-- Make it a circle -->
+        </shape>
+    </item>
+
+    <!-- Check mark -->
+    <item android:drawable="@drawable/ic_check_white" android:gravity="center"/>
+</layer-list>

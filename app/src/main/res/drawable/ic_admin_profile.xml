@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background layer -->
+    <item>
+        <shape
+            android:shape="oval">
+            <solid android:color="@android:color/white"/>
+            <size
+                android:width="48dp"
+                android:height="48dp"/>
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/darker_gray"/>
+        </shape>
+    </item>
+    <!-- Image layer -->
+    <item
+        android:drawable="@drawable/admin_profile_pic"
+        android:gravity="center"/>
+</layer-list>

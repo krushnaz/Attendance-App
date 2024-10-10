@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- ScrollView for the form fields -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title and Cancel Button Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Add New Teacher"
+                    android:textSize="20sp"
+                    android:textColor="@color/textPrimaryColor"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_cancel"
+                    android:contentDescription="Cancel"/>
+            </LinearLayout>
+
+            <!-- Form fields -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:textColor="@android:color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:textColor="@android:color/black"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColor="@android:color/black"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="@android:color/black"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:textColor="@android:color/black"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Department"
+                    android:textColor="@android:color/black"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/photo_border"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Teacher"
+                app:backgroundTint="@color/primaryColor"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<!-- res/drawable/fab_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/fab_background"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/fab_background"/>
+        </shape>
+    </item>
+</selector>

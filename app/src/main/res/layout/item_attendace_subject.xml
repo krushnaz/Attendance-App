@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+
+    <!-- Table Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cardBackgroundColor"
+        android:paddingVertical="5dp">
+
+        <!-- Lecture Number -->
+        <TextView
+            android:id="@+id/tvLectureNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Lecture Name -->
+        <TextView
+            android:id="@+id/tvLectureName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Lecture Name"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Subject Name"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+
+        <!-- Time Slot -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="10:00 AM"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0" />
+</LinearLayout>
